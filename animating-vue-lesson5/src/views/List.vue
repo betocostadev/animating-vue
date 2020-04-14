@@ -1,13 +1,8 @@
 <template>
   <div>
-    <input
-      type="text"
-      v-model="newContact"
-      @keyup.enter="addContact"
-      placeholder="Name"
-    />
+    <input type="text" v-model="newContact" placeholder="Name" />
     <button @click="addContact">Add Contact</button>
-    <button @click="sortContacts">Sort Contacts</button>
+    <button @click="sortContacts">Sort</button>
 
     <transition-group name="slide-up" tag="ul" appear>
       <li v-for="contact in contacts" :key="contact">
@@ -22,14 +17,7 @@ export default {
   data() {
     return {
       newContact: '',
-      contacts: [
-        'Beau Thabeast',
-        'Cindy Rella',
-        'Alice Vunderlind',
-        'Seu Madruga',
-        'Xispirito',
-        'Chumaleia'
-      ]
+      contacts: ['Beau Thabeast', 'Cindy Rella', 'Alice Vunderlind']
     }
   },
   methods: {

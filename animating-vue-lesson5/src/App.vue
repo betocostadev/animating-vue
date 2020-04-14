@@ -2,7 +2,9 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Modal</router-link> |
-      <router-link to="/list">List</router-link>
+      <router-link to="/list">List</router-link> |
+      <router-link to="/drawer">Drawer</router-link> |
+      <router-link to="/cards">Cards</router-link>
     </div>
     <transition name="slide-fade" mode="out-in">
       <router-view />
@@ -102,16 +104,15 @@ ul {
 }
 
 .slide-up-enter {
-  transform: translateY(12px);
+  transform: translateY(10px);
   opacity: 0;
 }
 
 .slide-up-enter-active {
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
 }
 
-/* Use vue move to add motion to the sort button */
 .slide-up-move {
-  transition: transform 0.5s ease-out;
+  transition: transform 0.8s ease-in;
 }
 </style>
